@@ -5,7 +5,12 @@ import { getStorage } from 'firebase/storage';
 
 import config from './firebase-config.json';
 
-const app = initializeApp(config);
+const firebaseConfig = {
+  ...config,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || config.apiKey,
+};
+
+const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
