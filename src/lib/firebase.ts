@@ -14,5 +14,5 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
-export const db = initializeFirestore(app, {});
+export const db = initializeFirestore(app, {}, config.firestoreDatabaseId);
 export const storage = getStorage(app);

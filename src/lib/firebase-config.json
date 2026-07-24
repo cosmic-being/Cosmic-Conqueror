@@ -1,9 +1,11 @@
 {
-  "projectId": "cosmic-conqueror-7eacf",
-  "appId": "1:498388184597:web:13b12455f70bf95903e81c",
+  "projectId": "lustrous-mediator-cp928",
+  "appId": "1:117309359533:web:6346607da8e09283b20d24",
   "apiKey": "",
-  "authDomain": "cosmic-conqueror-7eacf.firebaseapp.com",
-  "storageBucket": "cosmic-conqueror-7eacf.firebasestorage.app",
-  "messagingSenderId": "498388184597",
-  "measurementId": "G-T5DRZCP8FF"
+  "authDomain": "lustrous-mediator-cp928.firebaseapp.com",
+  "firestoreDatabaseId": "ai-studio-d98f37b0-8535-412f-b708-3f389067bc3f",
+  "storageBucket": "lustrous-mediator-cp928.firebasestorage.app",
+  "messagingSenderId": "117309359533",
+  "measurementId": "",
+  "oAuthClientId": "117309359533-nd1enik2mm9639t02furspo0u7s6k8ih.apps.googleusercontent.com"
 }
