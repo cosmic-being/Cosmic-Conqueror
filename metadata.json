@@ -1,0 +1,6 @@
+{
+  "name": "Cosmic Conqueror",
+  "description": "A centralized study material repository for Semester 3 Computer Science and Design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

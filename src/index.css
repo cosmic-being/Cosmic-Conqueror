@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+}
+
+:root {
+  /* Using the Purple palette from the image */
+  --primary: #9b59b6;
+  --accent: #ECA0B6;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --background: #F6F8FC;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-border: #e2e8f0;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+}
+
+.dark {
+  --primary: #c084fc;
+  --accent: #f4c0d1;
+  --background: #020617;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-border: #1e293b;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+}
+
+/* Color Themes for Subjects */
+.theme-blue {
+  --theme-main: #009BFF;
+  --theme-grad-start: #00D2FF;
+  --theme-grad-end: #0055FF;
+}
+.theme-green {
+  --theme-main: #7EC331;
+  --theme-grad-start: #E5F832;
+  --theme-grad-end: #459931;
+}
+.theme-yellow {
+  --theme-main: #F8CC1B;
+  --theme-grad-start: #F8F432;
+  --theme-grad-end: #F8AB05;
+}
+.theme-orange {
+  --theme-main: #F87905;
+  --theme-grad-start: #F8AB05;
+  --theme-grad-end: #F84D05;
+}
+.theme-pink {
+  --theme-main: #DF7988;
+  --theme-grad-start: #F8BDBD;
+  --theme-grad-end: #F16373;
+}
+.theme-purple {
+  --theme-main: #8C5581;
+  --theme-grad-start: #F4A9B6;
+  --theme-grad-end: #744669;
+}
+.theme-maroon {
+  --theme-main: #680C41;
+  --theme-grad-start: #DE1B76;
+  --theme-grad-end: #3B082D;
+}
+.theme-gray {
+  --theme-main: #5A6C88;
+  --theme-grad-start: #7C8EA6;
+  --theme-grad-end: #3C4B64;
+}
+.theme-teal {
+  --theme-main: #00E5FF;
+  --theme-grad-start: #64FFDA;
+  --theme-grad-end: #00BFA5;
+}
+.theme-indigo {
+  --theme-main: #536DFE;
+  --theme-grad-start: #8C9EFF;
+  --theme-grad-end: #3D5AFE;
+}
+.theme-lime {
+  --theme-main: #C6FF00;
+  --theme-grad-start: #EEFF41;
+  --theme-grad-end: #AEEA00;
+}
+.theme-emerald {
+  --theme-main: #00E676;
+  --theme-grad-start: #69F0AE;
+  --theme-grad-end: #00C853;
+}
+.theme-amber {
+  --theme-main: #FFAB00;
+  --theme-grad-start: #FFD740;
+  --theme-grad-end: #FF9100;
+}
+.theme-rose {
+  --theme-main: #FF1744;
+  --theme-grad-start: #FF5252;
+  --theme-grad-end: #D50000;
+}
+.theme-fuchsia {
+  --theme-main: #D500F9;
+  --theme-grad-start: #E040FB;
+  --theme-grad-end: #AA00FF;
+}
+.theme-cyan {
+  --theme-main: #00B8D4;
+  --theme-grad-start: #18FFFF;
+  --theme-grad-end: #0091EA;
+}
+.theme-violet {
+  --theme-main: #651FFF;
+  --theme-grad-start: #7C4DFF;
+  --theme-grad-end: #6200EA;
+}
+.theme-red {
+  --theme-main: #D50000;
+  --theme-grad-start: #FF1744;
+  --theme-grad-end: #B71C1C;
+}
+.theme-sky {
+  --theme-main: #00B0FF;
+  --theme-grad-start: #40C4FF;
+  --theme-grad-end: #0091EA;
+}
+.theme-slate {
+  --theme-main: #64748B;
+  --theme-grad-start: #94A3B8;
+  --theme-grad-end: #475569;
+}
+.theme-zinc {
+  --theme-main: #71717A;
+  --theme-grad-start: #A1A1AA;
+  --theme-grad-end: #52525B;
+}
+.theme-neutral {
+  --theme-main: #737373;
+  --theme-grad-start: #A3A3A3;
+  --theme-grad-end: #525252;
+}
+
+.theme-card {
+  position: relative;
+  background: linear-gradient(135deg, var(--theme-grad-start), var(--theme-grad-end));
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--theme-text);
+}
+.theme-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.dark .theme-card {
+  background: linear-gradient(135deg, var(--theme-grad-start), var(--theme-grad-end));
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-grain {
+  position: relative;
+}
+.bg-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
